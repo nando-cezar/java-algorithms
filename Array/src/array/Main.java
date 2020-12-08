@@ -18,8 +18,13 @@ public class Main {
        
         Array a = new Array(5);
         
-        a.add("Fernando");
+        a.add("element 1");
+        a.add("element 2");
+        a.add("element 3");
       
+        System.out.println(a.getSize());
+        System.out.println(a.toString());
+        System.out.println(a.search(0));
     }
     
 }

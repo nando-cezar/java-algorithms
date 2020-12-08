@@ -5,13 +5,15 @@
  */
 package array;
 
+import java.util.Arrays;
+
 /**
  *
  * @author Windows
  */
 public class Array {
 
-    private String[] elements;
+    private final String[] elements;
     private int size;
 
     public Array(int param) {
@@ -19,16 +21,16 @@ public class Array {
         this.size = 0;
     }
 
-    public void add(String element) {
+    /*public void add(String element) {
         for (int i = 0; i < elements.length; i++) {
             if (this.elements[i] == null) {
                 this.elements[i] = element;
                 break;
             }
         }
-    }
+    }*/
 
-    public boolean add(int position, String element) {
+    public boolean add(String element) {
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
@@ -43,21 +45,37 @@ public class Array {
 
     }
 
-    public String busca(int position) {
-        return null;
+    public String search(int position) {
+        
+        if(!(position >= 0 && position <= this.size)){
+            throw new IllegalArgumentException("Invalid position!");
+        }
+        return this.elements[position];
     }
 
-    public int search(String element) {
-        return 0;
-    }
-
-    public int size() {
-        return 0;
+    public int getSize() {
+        return this.size;
     }
 
     @Override
     public String toString() {
-        return null;
+        
+        StringBuilder sb = new StringBuilder();
+        
+        sb.append("[");
+        
+        for(int i = 0; i < this.size-1; i ++){
+            sb.append(this.elements[i]);
+            sb.append(", ");
+        }
+        
+        if(this.size > 0){
+          sb.append(this.elements[this.size-1]);
+        }
+        
+        sb.append("]");
+        
+        return sb.toString();
     }
 
 }
