@@ -31,6 +31,10 @@ public class Main {
         System.out.println(a);
         a.add(3, "element 5");
         System.out.println(a);
+        a.add(4, "element 6");
+        System.out.println(a);
+        a.remove(3);
+        System.out.println(a);
     }
     
 }

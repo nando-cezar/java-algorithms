@@ -11,7 +11,7 @@ package array;
  */
 public class Array {
 
-    private final String[] elements;
+    private String[] elements;
     private int size;
 
     public Array(int param) {
@@ -28,6 +28,7 @@ public class Array {
         }
     }*/
     public boolean add(String element) {
+        this.addCapacity();
         if (this.size < this.elements.length) {
             this.elements[this.size] = element;
             this.size++;
@@ -43,7 +44,7 @@ public class Array {
         if (!(position >= 0 && position <= this.size)) {
             throw new IllegalArgumentException("Invalid position!");
         }
-        
+        this.addCapacity();
         //move all elements
         for (int i = this.size - 1; i >= position; i--) {
             this.elements[i+1] = this.elements[i];
@@ -53,6 +54,16 @@ public class Array {
         this.size++;
         
         return false;
+    }
+    
+    private void addCapacity(){
+        if(this.size == this.elements.length){
+            String[] newElements = new String[this.elements.length * 2]; 
+            for (int i = 0; i < this.elements.length; i++) {
+                newElements[i] = this.elements[i];               
+            }
+            this.elements = newElements;
+        }
     }
 
     public String search(int position) {
@@ -99,7 +110,13 @@ public class Array {
     }
 
     public void remove(int position) {
-
+        if (!(position >= 0 && position <= this.size)) {
+            throw new IllegalArgumentException("Invalid position!");
+        }
+        for (int i = position; i < this.size-1; i++) {
+            this.elements[i] = this.elements[i+1];            
+        }
+        this.size--;
     }
 
 }
