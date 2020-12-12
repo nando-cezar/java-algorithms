@@ -25,6 +25,12 @@ public class Main {
         System.out.println(a.getSize());
         System.out.println(a.toString());
         System.out.println(a.search(0));
+        System.out.println(a.search("element 1") + " - " + a.search("element 5"));
+        System.out.println(a);
+        a.add(0, "element 4");
+        System.out.println(a);
+        a.add(3, "element 5");
+        System.out.println(a);
     }
     
 }
