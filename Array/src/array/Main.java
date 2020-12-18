@@ -35,6 +35,21 @@ public class Main {
         System.out.println(a);
         a.remove(3);
         System.out.println(a);
+        
+        ArrayObjects ao = new ArrayObjects(5);
+        
+        Contact c1 = new Contact("Fernando", "99999", "nandocezar@gmail.com");
+        Contact c2 = new Contact("Lucas", "99999", "lucascezar@gmail.com");
+        Contact c3 = new Contact("Iris", "99999", "iriscezar@gmail.com");
+        
+        ao.add(c1);
+        ao.add(c2);
+        ao.add(c3);
+        
+        System.out.println(ao.getSize());
+        System.out.println(ao);
+        System.out.println(ao.search(0));
+        System.out.println(ao.search(c1) + " - " + ao.search(c3));
     }
     
 }
