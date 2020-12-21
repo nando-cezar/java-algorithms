@@ -5,6 +5,8 @@
  */
 package array;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Windows
@@ -60,6 +62,29 @@ public class Main {
         System.out.println(l);
         System.out.println(l.search(0));
         System.out.println(l.search("list-element 1") + " - " + l.search("list-element 4"));
+
+        ArrayList<String> arrayList = new ArrayList<String>();
+
+        arrayList.add("element 1");
+        arrayList.add("element 2");
+        arrayList.add("element 3");
+
+        arrayList.add(1, "element 4");
+
+        if(arrayList.contains("element 4")){
+            System.out.println("Element exists!");
+        } else {
+            System.out.println("Element not exists!");
+        }
+
+        int i = arrayList.indexOf("element 4");
+
+        if(i > -1){
+            System.out.println("Index element is " + i);
+        } else {
+            System.out.println("Element not exists in array!");
+        }
+
     }
     
 }
