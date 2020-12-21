@@ -9,7 +9,7 @@ package array;
  *
  * @author Windows
  */
-public class Main {
+public class Main { 
 
     /**
      * @param args the command line arguments
@@ -50,6 +50,16 @@ public class Main {
         System.out.println(ao);
         System.out.println(ao.search(0));
         System.out.println(ao.search(c1) + " - " + ao.search(c3));
+
+        List<String> l = new List<String>(5);
+        l.add("list-element 1");
+        l.add("list-element 2");
+        l.add("list-element 3");
+
+        System.out.println(l.getSize());
+        System.out.println(l);
+        System.out.println(l.search(0));
+        System.out.println(l.search("list-element 1") + " - " + l.search("list-element 4"));
     }
     
 }

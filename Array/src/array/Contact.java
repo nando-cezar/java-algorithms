@@ -9,7 +9,7 @@ package array;
  *
  * @author Windows
  */
-public class Contact {
+public class Contact { 
     
     private String name;
     private String phone;
