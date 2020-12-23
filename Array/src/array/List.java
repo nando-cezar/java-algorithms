@@ -148,4 +148,8 @@ public class List<T> {
         }
     }
 
+    public void clear(){
+        this.elements = (T[]) new Object[this.elements.length];
+    }
+
 }
