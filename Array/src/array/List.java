@@ -84,6 +84,23 @@ public class List<T> {
         return -1;
     }
 
+    public int lastIndexOf(T element){
+        
+        int lastIndex = -1;
+
+        for (int i = this.size; i > 0; i--) {
+            if (this.elements[i].equals(element)) {
+                lastIndex = i;
+            }
+        }
+
+        return lastIndex;
+    }
+
+    public boolean contains(T element){
+        return search(element) > -1;
+    }
+
     public int getSize() {
         return this.size;
     }
@@ -117,6 +134,14 @@ public class List<T> {
             this.elements[i] = this.elements[i+1];            
         }
         this.size--;
+    }
+
+    public void remove(T element) {
+        
+        int position = this.search(element);
+        if(position > -1){
+            this.remove(position);
+        }
     }
 
 }
