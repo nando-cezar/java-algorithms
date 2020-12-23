@@ -66,7 +66,11 @@ public class List<T> {
         }
     }
 
-    public Object search(int position) {
+    public T get (int position){
+        return this.search(position);
+    }
+
+    public T search(int position) {
 
         if (!(position >= 0 && position <= this.size)) {
             throw new IllegalArgumentException("Invalid position!");
