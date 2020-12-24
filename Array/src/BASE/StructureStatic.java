@@ -14,6 +14,7 @@ public class StructureStatic<T> {
     protected T[] elements;
     protected int size;
 
+    @SuppressWarnings("unchecked")
     public StructureStatic(int capacity) {
         this.elements = (T[]) new Object[capacity];
         this.size = 0;
@@ -52,7 +53,8 @@ public class StructureStatic<T> {
         return false;
     }
     
-    private void addCapacity(){
+    @SuppressWarnings("unchecked")
+    protected void addCapacity(){
         if(this.size == this.elements.length){
             T[] newElements = (T[]) new Object[this.elements.length * 2]; 
             for (int i = 0; i < this.elements.length; i++) {
