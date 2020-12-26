@@ -31,6 +31,6 @@ public class Battery<T> extends StructureStatic<T>{
 			return  null ;
 		}
 		
-		return this.elements [- size];
+		return this.elements [--size];
 	}
 }
