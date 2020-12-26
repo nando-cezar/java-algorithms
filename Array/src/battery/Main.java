@@ -17,10 +17,11 @@ public class Main {
         System.out.println(b.top());
         System.out.println(b.stackDown());
 
+        ///////////////////////////////////////////////////////////////////////////////////////
         Stack<Integer> s = new Stack<Integer>();
 
         for(int i=1; i <= 10; i++){
-            s.add(i);
+            s.push(i);
         }
 
         System.out.println(s);

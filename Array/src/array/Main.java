@@ -63,6 +63,8 @@ public class Main {
         System.out.println(l.search(0));
         System.out.println(l.search("list-element 1") + " - " + l.search("list-element 4"));
 
+
+        ///////////////////////////////////////////////////////////////////////////////////////
         ArrayList<String> arrayList = new ArrayList<String>();
 
         arrayList.add("element 1");

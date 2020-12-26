@@ -89,7 +89,7 @@ public class StructureStatic<T> {
         return sb.toString();
     }
 
-    public boolean isEmpyt(){
+    public boolean isEmpty(){
         return this.size == 0;
     }
 

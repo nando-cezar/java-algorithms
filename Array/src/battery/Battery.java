@@ -18,7 +18,7 @@ public class Battery<T> extends StructureStatic<T>{
 	
 	public T top () {
 		
-		if (this.isEmpyt()) {
+		if (this.isEmpty()) {
 			return  null;
 		} 
 		
@@ -27,7 +27,7 @@ public class Battery<T> extends StructureStatic<T>{
 	
 	public T stackDown() {
 		
-		if (this.isEmpyt()) {
+		if (this.isEmpty()) {
 			return  null ;
 		}
 		
