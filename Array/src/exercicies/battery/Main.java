@@ -13,7 +13,7 @@ public class Main {
         
         Scanner scan = new Scanner(System.in);
         
-        for(int i=1; i<10; i++){
+        for(int i=1; i<=10; i++){
 
             System.out.println("Entre com valores: ");
 
@@ -31,7 +31,7 @@ public class Main {
                 if(stackdown == null){
                     System.out.println("Pilha vazia!");
                 } else {
-                    System.out.println("Número impar, desempilhando um elemento da pilha: " + b.stackDown());
+                    System.out.println("Número impar, desempilhando um elemento da pilha: " + stackdown);
                 }
             }
         }
@@ -40,13 +40,7 @@ public class Main {
 
         while(!b.isEmpty()){
 
-            Integer stackdown = b.stackDown();
-
-                if(stackdown == null){
-                    System.out.println("Pilha vazia!");
-                } else {
-                    System.out.println("Número impar, desempilhando um elemento da pilha: " + b.stackDown());
-                }
+            System.out.println("Desempilhando um elemento da pilha: " + b.stackDown());
         }
 
         System.out.println("Todos os elementos foram desempilhando!");
