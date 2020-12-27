@@ -1,7 +1,6 @@
 package exercicies.battery;
 
 import java.util.Scanner;
-import java.util.Stack;
 
 import battery.Battery;
 
