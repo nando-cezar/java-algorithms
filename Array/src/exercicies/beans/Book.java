@@ -42,4 +42,17 @@ public class Book {
     public void setYear(Calendar year) {
         this.year = year;
     }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    @Override
+    public String toString(){
+            return getName();
+    }
 }
