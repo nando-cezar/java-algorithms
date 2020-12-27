@@ -2,17 +2,18 @@ package exercicies.battery;
 
 import java.util.Calendar;
 import java.util.Scanner;
+import java.util.Stack;
 
 import battery.Battery;
 import exercicies.beans.Book;
 
-public class Main3 {
+public class Main4 {
     
     public static void main(String[] args){
 
         Book book = new Book();
 
-        Battery<Book> battery = new Battery<Book>(20);
+        Stack<Book> battery = new Stack<Book>();
 
         Scanner scan = new Scanner(System.in);
         
@@ -28,12 +29,12 @@ public class Main3 {
             System.out.println("Nome do autor do livro:");
             book.setAuthor(scan.nextLine());
 
-            battery.stackUp(book);
+            battery.push(book);
         }
 
-        System.out.println(battery.top());
+        System.out.println(battery.peek());
 
-        System.out.println(battery.stackDown());
+        System.out.println(battery.pop());
 
         System.out.println(battery.isEmpty());
 
