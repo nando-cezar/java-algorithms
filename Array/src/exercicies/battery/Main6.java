@@ -4,8 +4,13 @@ import battery.Battery;
 
 public class Main6 {
     
-    public static void main(){
+    public static void main(String[] args){
 
+        System.out.println(checkBalancedSymbols("A + B"));
+        System.out.println(checkBalancedSymbols("A + B - (D-F)"));
+        System.out.println(checkBalancedSymbols("{[()]}[](){()}"));
+        System.out.println(checkBalancedSymbols("{[(]}[](){()}"));
+        System.out.println(checkBalancedSymbols("A + B - D-F)"));
     }
 
     public static String ABRE = "([{";
@@ -13,12 +18,11 @@ public class Main6 {
 
     public static boolean checkBalancedSymbols(String arg){
 
-        boolean balanced = true;
-        Battery<Character> c = new Battery<>();
+        Battery<Character> c = new Battery<Character>();
         char symbol, top;
 
-        for(int i=0; i<arg.length() && balanced; i++){
-            symbol = ABRE.charAt(i);
+        for(int i=0; i<arg.length(); i++){
+            symbol = arg.charAt(i);
 
             if(ABRE.indexOf(symbol) > -1){
                 c.stackUp(symbol);
@@ -27,13 +31,13 @@ public class Main6 {
                     return false;
                 } else {
                     top = c.stackDown();
-                    if(ABRE.charAt(top) != FECHA.charAt(symbol)){
+                    if(ABRE.indexOf(top) != FECHA.indexOf(symbol)){
                         return false;
                     }
                 }
             }
         }
 
-        return false;
+        return true;
     }
 }
