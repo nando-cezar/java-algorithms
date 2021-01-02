@@ -14,6 +14,10 @@ public class Main7 {
         System.out.println(numero + "em binario é: " + decimalBinario(numero));
     }
 
+    public static void imprimeResultado(int numero, int base){
+        System.out.println(numero + "em " + base +" é: " + decimalBinario(numero));
+    }
+
     public static String decimalBinario(int numero){
 
         Stack<Integer> pilha = new Stack<>();
@@ -38,6 +42,7 @@ public class Main7 {
         Stack<Integer> pilha = new Stack<>();
         String numBase = "";
         int resto;
+
 
         while(numero > 0){
             resto = numero % base;
