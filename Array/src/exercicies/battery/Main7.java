@@ -8,6 +8,8 @@ public class Main7 {
     public static void main(String[] args){
         
         imprimeResultado(2);
+
+        imprimeResultado(10, 5);
     }
 
     public static void imprimeResultado(int numero){
