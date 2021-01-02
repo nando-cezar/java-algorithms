@@ -32,4 +32,23 @@ public class Main7 {
 
         return numBinario;
     }
+
+    public static String decimalQualquerBase(int numero, int base){
+
+        Stack<Integer> pilha = new Stack<>();
+        String numBase = "";
+        int resto;
+
+        while(numero > 0){
+            resto = numero % base;
+            pilha.push(resto);
+            numero /= base;
+        }
+
+        while(!pilha.isEmpty()){
+            numBase += pilha.pop();
+        }
+
+        return numBase;
+    }
 }
