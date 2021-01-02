@@ -21,6 +21,12 @@ public class Main8 {
     public static void torreDeHanoi(int n, Stack<Integer> original, Stack<Integer> dest, Stack<Integer> aux){
         if(n > 0){
             torreDeHanoi(n-1, original, aux, dest);
+            dest.push(original.pop());
+            System.out.println("--------");
+            System.out.println("Original: " + original);
+            System.out.println("Destino: " + dest);
+            System.out.println("Aux: " + aux);
+            torreDeHanoi(n-1, aux, dest, original);
         }
     }
     
