@@ -23,4 +23,17 @@ public class Queues<T> extends StructureStatic<T> {
         }
         return this.elements[0];
     }
+
+    public T removeInQueues(){
+
+        if(this.isEmpty()){
+            return null;
+        }
+
+        T elementRemoved = this.elements[0];
+
+        this.remove(0);
+
+        return elementRemoved;
+    }
 }
