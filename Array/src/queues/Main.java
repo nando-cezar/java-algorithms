@@ -11,5 +11,6 @@ public class Main {
         System.out.println(queues.isEmpty());
         System.out.println(queues.getSize());
         System.out.println(queues.toString());
+        System.out.println(queues.spy());
     }
 }
