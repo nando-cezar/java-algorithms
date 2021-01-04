@@ -34,5 +34,13 @@ public class Main {
         System.out.println(fila.remove());
 
         System.out.println(fila);
+
+        QueuePriority<Integer> qp = new QueuePriority<>();
+
+        qp.addInQueues(1);
+        qp.addInQueues(2);
+        qp.addInQueues(3);
+
+        System.out.println(qp);
     }
 }
