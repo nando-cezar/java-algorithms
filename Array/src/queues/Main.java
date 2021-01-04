@@ -1,6 +1,7 @@
 package queues;
 
 import java.util.LinkedList;
+import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class Main {
@@ -42,5 +43,13 @@ public class Main {
         qp.addInQueues(3);
 
         System.out.println(qp);
+
+        /////////////////////////////////////////
+        Queue<Integer> filaPrioridade = new PriorityQueue<>();
+
+        filaPrioridade.add(2);
+        filaPrioridade.add(1);
+
+        System.out.println(filaPrioridade);
     }
 }
